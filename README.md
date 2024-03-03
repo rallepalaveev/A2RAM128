@@ -1,13 +1,13 @@
 # A2RAM128
 
 This is an expansion card for Apple2 computers, for machines which only have up to 48kB of RAM and are missing the upper 16kB, which are mapped to the 12kB ROM space $D000-$FFFF.
-The cards that are available, AKA Language cards, not only occupy a slot, but ofteny must have one of the DRAM chips removed from the motherboard and be linked with a cable to that socket. They usually provide more than an additional 16kB.
+The cards that are available, AKA Language cards, not only occupy a slot, but often must have one of the DRAM chips removed from the motherboard and be linked with a cable to that socket. They usually provide more than an additional 16kB.
 
 Here I created a card for the standard 50-pin slots, which adds 8 banks of 16kB - a total of 128kB, based on modern chips like SRAM, and not needing to have any additional cables to connect to the motherboard.
 
 **IMPORTANT: It is very important to NOT use this card on computers which already have the 16kB available as there would be clashes between the card and the existing RAM and supporting logic.**
 
-This project is based on a card with one 128kB SRAM chip and one PLD to decode the siganls.
+This project is based on a card with one 128kB SRAM chip and one PLD to decode the signals.
 
 The logic of the card completely follows the design recommendations of the Saturn cards:
 
@@ -43,7 +43,7 @@ N is the Slot Number + 8.
 
 Operation:
 
-The card houses the 3 softswitches above which upon reset are configured in the default configuration:
+The card houses the 3 soft-switches above which upon reset are configured in the default configuration:
 
 * Bank 2 is selected
 * ROM is readable
