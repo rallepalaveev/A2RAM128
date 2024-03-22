@@ -59,7 +59,5 @@ A test to be made for quick check of functionality:
 
 This sequence should not lead to the computer freezing with a responce "$C0N3-", because the monitor is copied to the RAM and continues to work from RAM.
 
-The benefit of the card is that programs which require 64kB of RAM or more can be used - primarily ProDOS. It works from any 50-pin slot with no additional cabling - P&P.
-
-Suggested slot to be used in: #0
+The benefit of the card is that programs which require 64kB of RAM or more can be used - primarily ProDOS. It works from any 50-pin slot with no additional cabling - P&P, however some programs expect that the card is in slot #0, so this is the recommended use.
 
