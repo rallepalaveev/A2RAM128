@@ -5,7 +5,7 @@ The cards that are available, AKA Language cards, not only occupy a slot, but of
 
 Here I created a card for the standard 50-pin slots, which adds 8 banks of 16kB - a total of 128kB, based on modern chips like SRAM, and not needing to have any additional cables to connect to the motherboard.
 
-**IMPORTANT: It is very important to NOT use this card on computers which already have the 16kB available as there would be clashes between the card and the existing RAM and supporting logic.**
+**IMPORTANT: The card must not be used on computers which already have the 16kB BSR available as there would be clashes between the card and the existing RAM's supporting logic.**
 
 This project is based on a card with one 128kB SRAM chip and one PLD to decode the signals.
 
