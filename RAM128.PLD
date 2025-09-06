@@ -37,10 +37,11 @@ OE         = !RW;
 WE         = !F0 # RW;
 DEF        = A15 & A14 & (A13 # A12);
 CE         = !(DEF & (RDRAM & RW # WRRAM & OE));
-WRRAM      = (WRRAM & (DevSel # A0 # A2)) # !(DevSel # !A0 # A2) # !RESET;
+WRRAM      = (WRRAM & RESET & (DevSel # A0 # A2)) # !(DevSel # !A0 # A2);
 RDRAM      = (RDRAM & RESET & (DevSel # !(A0 $ A1) # A2)) # !(DevSel # (A0 $ A1) # A2);
 BANK       = (BANK & (DevSel # !A3 # A2)) # !(DevSel # A3 # A2) # !RESET;
 RA12       = (BANK & !A13) # (A13 & A12);
 RA14       = (RA14 & RESET & (A0 # DevSel # !A2)) # A0 & !DevSel & A2;
 RA15       = (RA15 & RESET & (A1 # DevSel # !A2)) # A1 & !DevSel & A2;
 RA16       = (RA16 & RESET & (A3 # DevSel # !A2)) # A3 & !DevSel & A2;
+
