@@ -9797,7 +9797,7 @@
 			(justify mirror)
 		)
 	)
-	(gr_text "128kB Bank Switched RAM card.\nHardware design by Ralle Palaveev (c) 2024.\nFor A2 computers with less than 64kB RAM."
+	(gr_text "128kB Bank Switched RAM card.\nHardware design by Ralle Palaveev (c) 2025.\n"
 		(at 133.223 111.633 0)
 		(layer "B.SilkS")
 		(uuid "f489043b-f86f-4a30-b207-55118689bbf4")
