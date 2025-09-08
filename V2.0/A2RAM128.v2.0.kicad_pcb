@@ -9867,7 +9867,7 @@
 			)
 		)
 	)
-	(gr_text "A2RAM128.v2.0 for Apple ][, (c) 2024 by Ralle Palaveev, https://apple2.co.uk/"
+	(gr_text "A2RAM128.v2.0 for Apple ][, (c) 2025 by Ralle Palaveev, https://apple2.co.uk/"
 		(at 133.858 122.301 0)
 		(layer "F.SilkS")
 		(uuid "570d6e7e-305a-47a6-b328-f3b8afabc450")
