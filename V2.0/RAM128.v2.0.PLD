@@ -1,0 +1,40 @@
+Name      RAM128.v2.0;
+Partno    00;
+Date      08/09/25;
+Revision  01;
+Designer  Ralle Palaveev;
+Company   None;
+Assembly  None;
+Location  None;
+Device    g22v10;
+
+/* This is for 128kB A2RAM128 Card with 2 diodes and CE on GND */
+
+PIN 1        = !DevSel;
+PIN 2        = RW;
+PIN [3..6]   = [A15..A12];
+PIN [7..10]  = [A3..A0];
+PIN 11       = !RESET;
+PIN 13       = F0;
+PIN 14       = RA12;
+PIN 15       = BANK;
+PIN 16       = WBIT;
+PIN 17       = WRAM;
+PIN 18       = OE;
+PIN 19       = RRAM;
+PIN [20..22] = [RA14..RA16];
+PIN 23       = WE;
+
+[RA16, RA15, RA14, WBIT, BANK, WRAM, RRAM].ar = RESET;
+
+DEF          = A15 & A14 & (A13 # A12);
+OE           = !(RW & DEF & RRAM);
+WE           = !(F0 & !RW & DEF & WRAM);
+WBIT.d       = WBIT & A2 # A0 & !A2;
+WRAM.d       = WRAM & A2 # A0 & !A2 & WBIT;
+RRAM.d       = RRAM & A2 # !((A0 $ A1) # A2);
+BANK.d       = BANK & A2 # !A2 & A3;
+RA12         = BANK & !A13 # A13 & A12;
+RA14.d       = RA14 & !A2 # A0 & A2;
+RA15.d       = RA15 & !A2 # A1 & A2;
+RA16.d       = RA16 & !A2 # A3 & A2;
