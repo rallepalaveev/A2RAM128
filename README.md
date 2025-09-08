@@ -61,3 +61,5 @@ This sequence should not lead to the computer freezing with a responce "$C0N3-",
 
 The benefit of the card is that programs which require 64kB of RAM or more can be used - primarily ProDOS. It works from any 50-pin slot with no additional cabling - P&P, however some programs expect that the card is in slot #0, so this is the recommended use.
 
+V2.0 was created to fullfill the requrements by the Saturn cards to activate the card for writing by two succecutive calls to C0N09.
+
