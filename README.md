@@ -1,17 +1,14 @@
 # A2RAM128
 
-This is an expansion card for Apple2 computers, for machines which only have up to 48kB of RAM and are missing the upper 16kB, which are mapped to the 12kB ROM space $D000-$FFFF.
-The cards that are available, AKA Language cards, not only occupy a slot, but often must have one of the DRAM chips removed from the motherboard and be linked with a cable to that socket. They usually provide more than an additional 16kB.
+This is an expansion 128kB RAM card for Apple2 computers, which uses the the upper 16kB, which are mapped to the 12kB ROM space $D000-$FFFF.
 
-Here I created a card for the standard 50-pin slots, which adds 8 banks of 16kB - a total of 128kB, based on modern chips like SRAM, and not needing to have any additional cables to connect to the motherboard.
+The card uses the standard 50-pin slots, and adds 8 banks of 16kB - a total of 128kB, based on modern chips like SRAM, and not needing to have any additional cables to connect to the motherboard.
 
-**IMPORTANT: The card must not be used on computers which already have the 16kB BSR available as there would be clashes between the card and the existing RAM's supporting logic.**
+This project is based on one 128kB SRAM chip and one PLD for logic.
 
-This project is based on a card with one 128kB SRAM chip and one PLD to decode the signals.
+The logic of the card follows the design recommendations of the Saturn cards:
 
-The logic of the card completely follows the design recommendations of the Saturn cards:
-
-There are 8 banks of the following organization:
+There are 8 x 16kB banks of the following organization:
 * Two sub-banks A and B of 4kB are mapped to $D000-$DFFF
 * One sub-bank of 8kB is mapped to $E000-$FFFF
 
@@ -47,7 +44,7 @@ The card houses the 3 soft-switches above which upon reset are configured in the
 
 * Sub-bank A is selected
 * ROM is readable
-* RAM is writeable
+* RAM is writeable (v2.0 RAM is not writable)
 
 A test to be made for quick check of functionality:
 
