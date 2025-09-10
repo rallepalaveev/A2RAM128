@@ -12,7 +12,7 @@ This project is based on a card with one 128kB SRAM chip and one PLD to decode t
 The logic of the card completely follows the design recommendations of the Saturn cards:
 
 There are 8 banks of the following organization:
-* Two sub-banks of 4kB are mapped to $D000-$DFFF
+* Two sub-banks A and B of 4kB are mapped to $D000-$DFFF
 * One sub-bank of 8kB is mapped to $E000-$FFFF
 
 Bank-switched RAM soft switches:
@@ -45,13 +45,17 @@ Operation:
 
 The card houses the 3 soft-switches above which upon reset are configured in the default configuration:
 
-* Bank 2 is selected
+* Sub-bank A is selected
 * ROM is readable
 * RAM is writeable
 
 A test to be made for quick check of functionality:
 
 ]CALL-151           # Enter monitor
+
+*C0N1               # Start activation of RAM for writing
+
+*C0N1               # Finish activation of RAM for writing
 
 *F800<F800.FFFFM    # Copy monitor to RAM
 
