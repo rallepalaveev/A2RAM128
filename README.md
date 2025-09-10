@@ -55,7 +55,7 @@ A test to be made for quick check of functionality:
 
 *C0N1               # Start activation of RAM for writing (v2 only)
 
-*C0N1               # Finish activation of RAM for writing (v2 only)
+*C0N1               # Activation of RAM for writing
 
 *F800<F800.FFFFM    # Copy monitor to RAM
 
