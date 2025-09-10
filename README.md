@@ -53,9 +53,9 @@ A test to be made for quick check of functionality:
 
 ]CALL-151           # Enter monitor
 
-*C0N1               # Start activation of RAM for writing
+*C0N1               # Start activation of RAM for writing (v2 only)
 
-*C0N1               # Finish activation of RAM for writing
+*C0N1               # Finish activation of RAM for writing (v2 only)
 
 *F800<F800.FFFFM    # Copy monitor to RAM
 
